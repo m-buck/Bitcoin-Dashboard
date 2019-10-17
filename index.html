@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bitcoin Kids</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" integrity="sha256-JG6hsuMjFnQ2spWq0UiaDRJBaarzhFbUxiUTxQDA9Lk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js" integrity="sha256-J2sc79NPV/osLcIpzL3K8uJyAD7T5gaEFKlLDM18oxY=" crossorigin="anonymous"></script>
+<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="">
+
+<br /><br /><br />
+<center><img src="btc.png" height="80">
+
+
+
+<div id="wrapper">
+<section id="main">
+<header>
+<table width="*">
+<tr>
+<td width="428">
+<span class="avatar"><img src="images/avatar1.jpg" alt="" /></span>
+<h1>Addison</h1>
+<p>0.02474326 BTC<font color="green"><h3>$199.47</h3></font></p>
+</td>
+<td width="428">
+<span class="avatar"><img src="images/avatar2.jpg" alt="" /></span>
+<h1>Ellington</h1>
+<p>0.02145049 BTC<font color="green"><h3>$172.92</h3></font></p>
+</td>
+<td width="428">
+<span class="avatar"><img src="images/avatar4.jpg" alt="" /></span>
+<h1>Maelin</h1>
+<p>0.00115667 BTC<font color="green"><h3>$9.32</h3></font></p>
+</td>
+</tr>
+</table>
+</header>
+</section><br /><br />
+<section id="main">
+<header>
+
+<table width="*"><tr><td width="257"><h2>Current</h2><h3>$8061.45</h3></td><td width="257"><h2>24-hr Change</h2><font color="green">1.1%</font></td><td width="257"><h2>Last Week</h2>$8596.45</td><td width="257"><h2>Last Month</h2>$10312.67</td><td width="257"><h2>Last Year</h2>$6514.64</td></tr><tr ><td colspan="5">
+<br />
+    <canvas id="myChart" width="1285" height="400"></canvas>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var gradientStroke = ctx.createLinearGradient(0, 0, 2000, 0);
+gradientStroke.addColorStop(0, "rgba(124, 77, 255, .3)");
+gradientStroke.addColorStop(0.3, "rgba(68, 138, 255, .3)");
+gradientStroke.addColorStop(0.6, "rgba(0, 188, 212, .5)");
+gradientStroke.addColorStop(1, "rgba(29, 233, 182, .6)");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["09-15","09-16","09-17","09-18","09-19","09-20","09-21","09-22","09-23","09-24","09-25","09-26","09-27","09-28","09-29","09-30","10-01","10-02","10-03","10-04","10-05","10-06","10-07","10-08","10-09","10-10","10-11","10-12","10-13","10-14","10-15","10-16"],
+        datasets: [{
+            label: 'Price USD',
+            data: [10312.67,10271.01,10199.91,10165.33,10282.66,10179.95,9989.75,10036.71,9694.51,8538.1,8449.92,8075.97,8200.28,8221.38,8067.27,8316.88,8326.58,8395.22,8246.54,8161.35,8153.98,7868.34,8217.63,8191.07,8596.45,8590.37,8272.4,8311.81,8290.97,8362.07,8171.27,8002.85],
+            lineTension: 0,
+            lineTension: 0,
+            //borderDash: [2, 2],
+            //backgroundColor: [ 
+            //    'rgba(54, 162, 235, 0.2)'
+                //gradientStroke
+            //],
+            //borderColor: [
+                //gradientStroke
+            //    'rgba(54, 162, 235, 1)'
+            //],
+            borderColor:               gradientStroke,
+            pointBorderColor:          gradientStroke,
+            pointBackgroundColor:      gradientStroke,
+            pointHoverBackgroundColor: gradientStroke,
+            pointHoverBorderColor:     gradientStroke,
+            backgroundColor:           gradientStroke,
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:false,
+                    callback: function(value, index, values) {
+                        return '$' + value;}
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    autoSkip: false,
+                    maxRotation: 40,
+                    minRotation: 40
+                }
+            }]
+        }
+    }
+});
+</script><br></td></tr>
+
+</table>
+</header>
+</section>
+</div>
+</body>
+</html>
