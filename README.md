@@ -4,4 +4,4 @@ A small python app that fetches user-defined bitcoin wallet/price info and write
 
 
 
-![](https://i.imgur.com/MVsELRs.jpg)
+![](https://i.imgur.com/MwFQdwL.png)
